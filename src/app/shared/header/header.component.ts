@@ -26,7 +26,7 @@ export class HeaderComponent implements AfterViewInit {
     const body = $('html, body');
     body.stop().animate({scrollTop: 0 }, 500, 'swing');
     console.log(this.router);
-    if (this.router.url === '/chemist-locator' || this.router.url === '/washroomfinder') {
+    if (this.router.url === '/chemist-locator' || this.router.url === '/washroomfinder' || this.router.url === '/share/know-more-about-prostate') {
       this.router.navigateByUrl('/');
     }
   }

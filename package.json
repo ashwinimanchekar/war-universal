@@ -12,7 +12,7 @@
     "dev:ssr": "ng run angular-universal-example:serve-ssr",
     "postinstall": "npm run build:ssr",
     "serve:ssr": "node dist/angular-universal-example/server/main.js",
-    "build:ssr": "ng build --prod && ng run angular-universal-example:server:production",
+    "build:ssr": "ng build && ng run angular-universal-example:server:production",
     "prerender": "ng run angular-universal-example:prerender"
   },
   "private": true,
