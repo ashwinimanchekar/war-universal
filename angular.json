@@ -25,12 +25,16 @@
             ],
             "styles": [
               "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/assets/css/bootstrap-touch-slider.css",
               "src/assets/css/main.css",
               "src/assets/css/multi.css",
               "src/assets/css/feature.css"
             ],
             "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/bootstrap.min.js",
               "src/assets/js/multi.js",
               "src/assets/js/jquery.touchSwipe.min.js",
               "src/assets/js/bootstrap-touch-slider.js"
