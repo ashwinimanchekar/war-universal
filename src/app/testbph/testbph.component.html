@@ -1,0 +1,620 @@
+<main class="tybspage">
+    <section id="banner">
+       <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="false" >
+          <!-- Indicators -->
+          <!-- Wrapper For Slides -->
+          <div class="carousel-inner" role="listbox">
+             <!-- Third Slide -->
+             <div class="item active">
+                <!-- Slide Background -->
+                <img src="assets/images/symptom-severity/banner.png" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                <div class="bs-slider-overlay"></div>
+             </div>
+          </div>
+          <!-- End of Wrapper For Slides -->
+          <!-- Left Control -->
+       </div>
+       <!-- End  bootstrap-touch-slider Slider -->
+    </section>
+    <section class="parasection">
+       <div class="container">
+          <h2>This <span>BPH symptom score</span> will help your doctor to evaluate your<br>
+             condition and understand your <span>BPH symptom severity better.</span><sup>1,2</sup>
+          </h2>
+          <hr>
+          <h2>Answer each question by selecting the number<br>
+             corresponding to your symptom severity.<sup>1,2</sup>
+          </h2>
+          <hr>
+          <h2>Carry this with you and show it to your doctor<br>
+             during your next appointment
+          </h2>
+       </div>
+    </section>
+    <section class="checkheader">
+       <h1>CHECK THE BOX BASED ON YOUR SYMPTOM SEVERITY</h1>
+       <div class="container">
+          <div class="row">
+             <div class="col-sm-12">
+                <div class="col-md-2">
+                   <div class="row">
+                      <h4>KEY:</h4>
+                   </div>
+                   <div class="row">
+                      &nbsp;
+                   </div>
+                </div>
+                <div class="col-md-10">
+                   <div class="row">
+                      <div class="col-md-4">
+                         <div class="checkinstructions">
+                            <span>0</span>  Not at all. 
+                         </div>
+                         <div class="checkinstructions">
+                            <span>1</span>   Less than 1 in 5 times
+                         </div>
+                      </div>
+                      <div class="col-md-4">
+                         <div class="checkinstructions">
+                            <span>2</span>   Less than half the time.
+                         </div>
+                         <div class="checkinstructions">
+                            <span>3</span>   Roughly half the time
+                         </div>
+                      </div>
+                      <div class="col-md-4">
+                         <div class="checkinstructions">
+                            <span>4</span>   More than half the time.
+                         </div>
+                         <div class="checkinstructions">
+                            <span>5</span>   Almost always.
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <section class="optionbox">
+       <div class="container">
+          <div class="col-sm-12">
+             <div class="row">
+               <form [formGroup]="form" *ngIf="!totalScore">
+                  <div class="col-12" *ngIf="submitAttempt && form.invalid">
+                     <div class="alert alert-danger" role="alert">
+                        Please fill all input!
+                      </div>
+                   </div>
+                  <div class="col-sm-6">
+                     <div class="">
+                        <div class="box">
+                           <div class="box1">
+                              <p>Over the past month or so, how often have you<br>had a sensation of not having emptied your<br>bladder completely after you ﬁnished urinating?</p>
+                           </div>
+                           <div class="box2">
+                              <figure><img src="assets/images/symptom-severity/1.png" ></figure>
+                           </div>
+                           <div class="box3">
+                              <div class="number">
+                                 <button>0</button>  <button>1</button>  <button>2</button>  <button>3</button>  <button>4</button>   <button>5</button>
+                              </div>
+                           </div>
+                           <div class="box4">
+                              <div class="radioboxrow">
+                                 <label class="">
+                                 <input type="radio" formControlName="sensation" name="sensation" value="0">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="sensation" name="sensation" value="1">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="sensation" name="sensation" value="2">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="sensation" name="sensation" value="3">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="sensation" name="sensation" value="4">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="sensation" name="sensation" value="5">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="">
+                        <div class="box">
+                           <div class="box1">
+                              <p>Over the past month or so, how often have you<br>had to urinate again in less than 2 hours from the<br>last time when you ﬁnished urinating?</p>
+                           </div>
+                           <div class="box2">
+                              <figure><img src="assets/images/symptom-severity/2.png" ></figure>
+                           </div>
+                           <div class="box3">
+                              <div class="number">
+                                 <button>0</button>  <button>1</button>  <button>2</button>  <button>3</button>  <button>4</button>   <button>5</button>
+                              </div>
+                           </div>
+                           <div class="box4">
+                              <div class="radioboxrow">
+                                 <label class="">
+                                 <input type="radio" formControlName="urinate_again" name="urinate_again" value="0">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="urinate_again" name="urinate_again" value="1">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="urinate_again" name="urinate_again" value="2">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="urinate_again" name="urinate_again" value="3">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="urinate_again" name="urinate_again" value="4">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="urinate_again" name="urinate_again" value="5">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="">
+                        <div class="box">
+                           <div class="box1">
+                              <p>Over the past month or so, how often have<br>you found that you stopped and started<br>again several times while you urinated?</p>
+                           </div>
+                           <div class="box2">
+                              <figure><img src="assets/images/symptom-severity/3.png" ></figure>
+                           </div>
+                           <div class="box3">
+                              <div class="number">
+                                 <button>0</button>  <button>1</button>  <button>2</button>  <button>3</button>  <button>4</button>   <button>5</button>
+                              </div>
+                           </div>
+                           <div class="box4">
+                              <div class="radioboxrow">
+                                 <label class="">
+                                 <input type="radio" formControlName="stopped_started" name="stopped_started" value="0">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="stopped_started" name="stopped_started" value="1">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="stopped_started" name="stopped_started" value="2">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="stopped_started" name="stopped_started" value="3">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="stopped_started" name="stopped_started" value="4">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="stopped_started" name="stopped_started" value="5">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="">
+                        <div class="box">
+                           <div class="box1">
+                              <p>Over the past month or so, how often<br>you had a weak stream of urine?</p>
+                           </div>
+                           <div class="box2">
+                              <figure><img src="assets/images/symptom-severity/4.png" ></figure>
+                           </div>
+                           <div class="box3">
+                              <div class="number">
+                                 <button>0</button>  <button>1</button>  <button>2</button>  <button>3</button>  <button>4</button>   <button>5</button>
+                              </div>
+                           </div>
+                           <div class="box4">
+                              <div class="radioboxrow">
+                                 <label class="">
+                                 <input type="radio" formControlName="weak_stream" name="weak_stream" value="0">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="weak_stream" name="weak_stream" value="1">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="weak_stream" name="weak_stream" value="2">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="weak_stream" name="weak_stream" value="3">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="weak_stream" name="weak_stream" value="4">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="weak_stream" name="weak_stream" value="5">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="">
+                        <div class="box">
+                           <div class="box1">
+                              <p>Over the past month or so, how<br>often have you found it difﬁcult<br>to postpone or defer urination?</p>
+                           </div>
+                           <div class="box2">
+                              <figure><img src="assets/images/symptom-severity/5.png" ></figure>
+                           </div>
+                           <div class="box3">
+                              <div class="number">
+                                 <button>0</button>  <button>1</button>  <button>2</button>  <button>3</button>  <button>4</button>   <button>5</button>
+                              </div>
+                           </div>
+                           <div class="box4">
+                              <div class="radioboxrow">
+                                 <label class="">
+                                 <input type="radio" formControlName="defer_urination" name="defer_urination" value="0">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="defer_urination" name="defer_urination" value="1">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="defer_urination" name="defer_urination" value="2">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="defer_urination" name="defer_urination" value="3">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="defer_urination" name="defer_urination" value="4">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="defer_urination" name="defer_urination" value="5">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="">
+                        <div class="box">
+                           <div class="box1">
+                              <p>Over the past month or so, how<br>often have you had to push or<br>strain to start the outﬂow of urine?</p>
+                           </div>
+                           <div class="box2">
+                              <figure><img src="assets/images/symptom-severity/6.png" ></figure>
+                           </div>
+                           <div class="box3">
+                              <div class="number">
+                                 <button>0</button>  <button>1</button>  <button>2</button>  <button>3</button>  <button>4</button>   <button>5</button>
+                              </div>
+                           </div>
+                           <div class="box4">
+                              <div class="radioboxrow">
+                                 <label class="">
+                                 <input type="radio" formControlName="push_strain" name="push_strain" value="0">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="push_strain" name="push_strain" value="1">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="push_strain" name="push_strain" value="2">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="push_strain" name="push_strain" value="3">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="push_strain" name="push_strain" value="4">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                                 <label class="">
+                                 <input type="radio" formControlName="push_strain" name="push_strain" value="5">  
+                                 <span class="checkmark"></span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="">
+                        <div class="box">
+                           <div class="box1">
+                              <p>Over the past 1 month, how many times did<br>you most typically get up to pass urine from the<br>time you went to bed at night until the time<br>you got up in the morning?</p>
+                           </div>
+                           <div class="box2">
+                              <figure><img src="assets/images/symptom-severity/7.png" ></figure>
+                           </div>
+                           <div class="box3">
+                              <div class="number">
+                                 <button>0</button>  <button>1</button>  <button>2</button>  <button>3</button>  <button>4</button>   <button>5</button>
+                              </div>
+                           </div>
+                           <div class="box4">
+                              <div class="radioboxrow">
+                                 <div class="labelbox">
+                                    <label class="">
+                                    <input type="radio" formControlName="pash_urine" name="pash_urine" value="0">  
+                                    <span class="checkmark"></span>
+                                    </label>
+                                    <p>None</p>
+                                 </div>
+                                 <div class="labelbox">
+                                    <label class="">
+                                    <input type="radio" formControlName="pash_urine" name="pash_urine" value="1">  
+                                    <span class="checkmark"></span>
+                                    </label>
+                                    <p>Once</p>
+                                 </div>
+                                 <div class="labelbox">
+                                    <label class="">
+                                    <input type="radio" formControlName="pash_urine" name="pash_urine" value="2">  
+                                    <span class="checkmark"></span>
+                                    </label>
+                                    <p>Twice</p>
+                                 </div>
+                                 <div class="labelbox">
+                                    <label class="">
+                                    <input type="radio" formControlName="pash_urine" name="pash_urine" value="3">  
+                                    <span class="checkmark"></span>
+                                    </label>
+                                    <p>Thrice</p>
+                                 </div>
+                                 <div class="labelbox">
+                                    <label class="">
+                                    <input type="radio" formControlName="pash_urine" name="pash_urine" value="4">  
+                                    <span class="checkmark"></span>
+                                    </label>
+                                    <p>Four Times</p>
+                                 </div>
+                                 <div class="labelbox">
+                                    <label class="">
+                                    <input type="radio" formControlName="pash_urine" name="pash_urine" value="5">  
+                                    <span class="checkmark"></span>
+                                    </label>
+                                    <p>5 or more times</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="">
+                        <button (click)="checkSumit();submit()" class="btn btn-block btn-brand-orange">Submit</button>
+                     </div>
+                  </div>
+                </form>
+                <div *ngIf="totalScore" class="col-sm-6 totalscore">
+                   <div class="">
+                      <div class="outerbox">
+                         <div class="box">
+                            <div class="box1 col-xs-8">
+                               <p>Your Total Score =</p>
+                            </div>
+                            <div class="box1 boxscore col-xs-4">
+                               <p>{{totalScore}}</p>
+                            </div>
+                         </div>
+                         <!-- <h4>(Add your scores from these questions and write the total score)</h4> -->
+                         <div class="box2">
+                            <h3>KNOW AND TRACK THE SEVERITY<br>
+                               OF YOUR BPH SYMPTOMS AS PER<br>
+                               YOUR TOTAL BPH SCORE.<sup>3</sup>
+                            </h3>
+                         </div>
+                         <div class="box2 meterbox">
+                           <figure class="meter"><img src="assets/images/meter.png" ></figure>
+                             <figure class="indicator" [style.transform]="'rotate(' + (scorepercentage) + 'deg)'"><img src="assets/images/indicator.png" ></figure>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-sm-12 quality" *ngIf="isNaN(qualityInNumber)">
+                   <div class="">
+                      <div class="box">
+                         <h1>QUALITY OF LIFE ASSESSMENT.<sup>2</sup></h1>
+                         <div class="box1">
+                            <p>If you were to spend the rest of your life with your urinary condition<br>remaining just the way it is now, how would you feel about it?</p>
+                         </div>
+                         <div class="box3">
+                            <div class="number row">
+                               <button>
+                                  <figure (click)="checkSumit();qualityOfLiftIndex = '0'" class="icon"><img src="assets/images/symptom-severity/quality1.png"></figure>
+                               </button>
+                               <button>
+                                  <figure (click)="checkSumit();qualityOfLiftIndex = '1'" class="icon"><img src="assets/images/symptom-severity/quality.png"></figure>
+                               </button>
+                               <button>
+                                  <figure (click)="checkSumit();qualityOfLiftIndex = '2'" class="icon"><img src="assets/images/symptom-severity/quality2.png"></figure>
+                               </button>
+                               <button>
+                                  <figure (click)="checkSumit();qualityOfLiftIndex = '3'" class="icon"><img src="assets/images/symptom-severity/quality3.png"></figure>
+                               </button>
+                               <button>
+                                  <figure (click)="checkSumit();qualityOfLiftIndex ='4'" class="icon"><img src="assets/images/symptom-severity/quality4.png"></figure>
+                               </button>
+                               <button>
+                                  <figure (click)="checkSumit();qualityOfLiftIndex = '5'" class="icon"><img src="assets/images/symptom-severity/quality5.png"></figure>
+                               </button>
+                               <button>
+                                  <figure (click)="checkSumit();qualityOfLiftIndex = '6'" class="icon"><img src="assets/images/symptom-severity/quality6.png"></figure>
+                               </button>
+                            </div>
+                         </div>
+                         <div class="clearfix"></div>
+                         <div class="box4">
+                            <form  [formGroup]="qualityLifeForm">
+                              <div class="col-sm-6 col-sm-offset-3">
+                                 <div class="box">
+                                    <div class="box1 col-xs-8">
+                                       <p>Quality of Life Index =</p>
+                                    </div>
+                                    <div class="box1 boxscore col-xs-4">
+                                       <p>
+                                          <input class="qli" formControlName="indexValue" type="number" min="0" max="5" name="qli" [(ngModel)]= "qualityOfLiftIndex">
+                                       </p>
+                                    </div>
+                                 </div>
+                                 <h4>(In the box, put the number that matches your condition)</h4>
+                                 <div class="alert alert-danger" *ngIf="qualityInNumber > 6" role="alert">
+                                    Enter valid value!
+                                  </div>
+                              </div>
+                           </form>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <section *ngIf="totalScore && qualityOfLiftIndex" class="howsevere" id="contentToConvert">
+       <div class="container">
+          <div class="row">
+             <h1> HOW SEVERE ARE YOUR SYMPTOMS?</h1>
+             <div class="col-sm-12">
+                <div class="col-sm-6">
+                   <div class="symptomscore">
+                      <div class="scorenumber">
+                         <h2>{{totalScore}}</h2>
+                      </div>
+                      <div class="scoredetails">
+                         <p>Your BPH symptom score</p>
+                         <h4>{{getBPHSymptom}}</h4>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-sm-6">
+                   <div class="symptomscore">
+                      <div class="scorenumber">
+                         <h2>{{qualityOfLiftIndex}}</h2>
+                      </div>
+                      <div class="scoredetails">
+                         <p>Your Quality of Life Score</p>
+                         <h4>{{lifeIndex[qualityInNumber]}}</h4>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-sm-12 scoresymptommeaning">
+             <div class="row">
+                <div class="col-sm-12">
+                   <h4>WHAT YOUR SYMPTOM SCORE MEANS:<sup>1</sup></h4>
+                </div>
+                <div class="col-sm-6">
+                   <div class="row scoresymptommeaningbox">
+                      <div class="col-xs-5 score">
+                         <h4>Score</h4>
+                      </div>
+                      <div class="col-xs-7 severity">
+                         <h4>Symptom Severity</h4>
+                      </div>
+                   </div>
+                   <div class="row scoresymptommeaningbox">
+                      <div class="col-xs-5 score">
+                         <button>
+                            <h4>1-7</h4>
+                         </button>
+                      </div>
+                      <div class="col-xs-7 severity">
+                         <h4>Mild</h4>
+                      </div>
+                   </div>
+                   <div class="row scoresymptommeaningbox">
+                      <div class="col-xs-5 score">
+                         <button>
+                            <h4>8-19</h4>
+                         </button>
+                      </div>
+                      <div class="col-xs-7 severity">
+                         <h4>Moderate</h4>
+                      </div>
+                   </div>
+                   <div class="row scoresymptommeaningbox">
+                      <div class="col-xs-5 score">
+                         <button>
+                            <h4>20-35</h4>
+                         </button>
+                      </div>
+                      <div class="col-xs-7 severity">
+                         <h4>Severe</h4>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-sm-6 details">
+                   <p>Your total score is {{totalScore}},<br>
+                      indicative of <b>{{getBPHSymptom}}</b> BPH symptoms.<br>
+                      Depending on your score, your<br>
+                      symptoms can be categorised as:<br>
+                      Mild (1-7), Moderate (8-19) or Severe (20-35).<br>
+                      <b>However, it is advisable to visit a doctor<br> 
+                      for a definitive diagnoshis</b>
+                      <br>
+                      <b>Visit : <a href="https://www.whatarelief.in/" target="blank">https://www.whatarelief.in/</a><br>
+                      to find your nearest one</b>
+                   </p>
+                </div>
+                <div class="col-sm-6 btn" (click)="downloadAsPDF()">
+                  <img  src="assets/images/symptom-severity/btn1.png">
+               </div>
+               <div class="col-sm-6 btn">
+                  <img  src="assets/images/symptom-severity/btn2.png">
+               </div>
+             </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="summary">
+               <h1>Summary of the score</h1>
+               <div class="col-sm-12">
+                  <div class="row">
+                     <button *ngFor="let values of questionaiesVal">{{values}}</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+       </div>
+    </section>
+ </main>

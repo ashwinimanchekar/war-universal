@@ -1,0 +1,8 @@
+.qli{
+    border: none;
+    background: transparent;
+    text-align: center;
+}
+.qli:focus{
+    outline: none;
+}

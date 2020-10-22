@@ -1,0 +1,55 @@
+<ng-container *ngIf="!isAddBph">
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top" >
+           <div class="container-fluid">
+              <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>                        
+                 </button>
+                 <a (click)="homepage()" class="navbar-brand"><img src="assets/images/What-a-realif.png"></a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar" style="display: none;">
+                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#features" routerLinkActive="active" class="txt"> Know More<br>About BPH</a></li>
+                    <li><a href="#test" routerLinkActive="active"  class="txt">Test Your<br>BPH Severity</a></li>
+                    <li><a routerLink="/chemist-locator" routerLinkActive="active" class="txt"> Chemist<br>Locator</a></li>
+                    <!-- <li><a href="#spec"  class="txt"> BPH Specialist<br>Locator</a></li> -->
+                    <li><a href="#washroom" routerLinkActive="active" class="txt">Washroom <br>Locator</a></li>
+                 </ul>
+              </div>
+           </div>
+        </nav>
+      </header>
+    
+    
+      <div id="fixedbutton">
+        <a class="button learn-more" href="#test">
+           <div class="circle">
+              <p class="button-text1">BPH</p>
+           </div>
+           <p class="button-text">Take an IPSS Test</p>
+        </a>
+        <br>
+        <br>
+        <!-- <a class="button learn-more" href="#spec">
+           <div class="circle">
+              <p class="button-text1">
+                 <img src="assets/images/Icon-2.png">
+              </p>
+           </div>
+           <p class="button-text">BPH Specialist Locator</p>
+        </a>
+        <br>
+        <br> -->
+        <a class="button learn-more" href="#washroom">
+           <div class="circle">
+              <p class="button-text1">
+                 <img src="assets/images/Icon-3.png">
+              </p>
+           </div>
+           <p class="button-text">Washroom Locator</p>
+        </a>
+      </div>
+</ng-container>

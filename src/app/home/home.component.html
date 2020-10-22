@@ -1,0 +1,367 @@
+<main class="homepage">
+    <section id="banner">
+       <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="false" >
+  
+          <div class="carousel-inner" role="listbox">
+  
+             <div class="item active">
+           
+                <img src="assets/images/Banner1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                <div class="bs-slider-overlay"></div>
+             </div>
+             
+             <div class="item">
+    
+                <img src="assets/images/Banner2.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                <div class="bs-slider-overlay"></div>
+              
+             </div>
+           
+             <div class="item">
+  
+                <img src="assets/images/Banner4.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                <div class="bs-slider-overlay"></div>
+      
+             </div>
+   
+             <div class="item">
+    
+                <img src="assets/images/Banner5.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                <div class="bs-slider-overlay"></div>
+      
+             </div>
+         
+          </div>
+  
+          <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+          <span  aria-hidden="true"><img src="assets/images/leftarrow.png"></span>
+          <span class="sr-only">Previous</span>
+          </a>
+  
+          <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+          <span aria-hidden="true"><img src="assets/images/rightarrow.png"></span>
+          <span class="sr-only">Next</span>
+          </a>
+       </div>
+  
+    </section>
+    <section id="features">
+       <div class="container">
+          <h2>KNOW MORE ABOUT <span>BPH</span></h2>
+          <p>
+             Benign prostatic hyperplasia (BPH) is a non-cancerous enlargement of prostate gland which usually occurs with Lower Urinary Tract Symptoms (LUTS) and is a very common urological condition seen in men above 40 years of age.  
+          </p>
+          <div class="MultiCarousel " data-items="2,3,4,4,4" data-slide="1" id="MultiCarousel"  data-interval="false">
+             <div class="MultiCarousel-inner" data-toggle="modal" data-target="#exampleModal">
+                <div class="item">
+                   <div class="pad15">
+                      <img src="assets/images/features/1.png"  data-target="#lightbox" data-slide-to="0" >
+                   </div>
+                </div>
+                <div class="item">
+                   <div class="pad15">
+                      <img src="assets/images/features/2.png"  data-target="#lightbox" data-slide-to="1">
+                   </div>
+                </div>
+                  <div class="item">
+                   <div class="pad15">
+                      <img src="assets/images/features/6.png" data-target="#lightbox" data-slide-to="5">
+                   </div>
+                </div>
+                 <div class="item">
+                   <div class="pad15">
+                      <img src="assets/images/features/4.png"  data-target="#lightbox" data-slide-to="3">
+                   </div>
+                </div>
+                  
+                <div class="item">
+                   <div class="pad15">
+                      <img src="assets/images/features/5.png"  data-target="#lightbox" data-slide-to="4">
+                   </div>
+                </div>
+              
+                <div class="item">
+                   <div class="pad15">
+                      <img src="assets/images/features/3.png"  data-target="#lightbox" data-slide-to="2">
+                   </div>
+                </div>
+             
+                <div class="item">
+                   <div class="pad15">
+                      <img src="assets/images/features/7.png" data-target="#lightbox" data-slide-to="6">
+                   </div>
+                </div>
+                <div class="item">
+                   <div class="pad15">
+                      <img src="assets/images/features/8.png" data-target="#lightbox" data-slide-to="7" >
+                   </div>
+                </div>
+             </div>
+             <button class="btn btn-primary leftLst"><img src="assets/images/leftarrow.png"></button>
+             <button class="btn btn-primary rightLst"><img src="assets/images/rightarrow.png"></button>
+          </div>
+          <div class="modal " id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+             <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                   </button>
+                   <div class="modal-body">
+                      <div id="lightbox" class="carousel slide" data-ride="carousel"  data-interval="false">
+                 
+                        <div class="carousel-inner">
+                           <div class="item" *ngFor="let images of imageTitle; let i = index;" [ngClass]="{'active': i === 0}">
+                              <img class="img-responsive" [src]="'assets/images/features/' + images.imagename" alt="...">
+                              <p class="socioicons">
+                                 <a [href]="facebookUrl + hostedURL + 'share/' + images.title" target="_blank"><img src="assets/images/features/Fb.png"></a>
+                                 <a [href]="whatsappUrl + hostedURL + 'share/' + images.title" target="_blank"><img src="assets/images/features/Whapp.png"></a>
+                              </p>
+                           </div>
+                           <!-- <div class="item">
+                              <img class="img-responsive" src="assets/images/features/mb2.jpg" alt="...">
+                              <p class="socioicons">
+                                 <a [href]="facebookUrl + hostedURL + '/assets/images/features/mb2.jpg'" target="_blank"><img src="assets/images/features/Fb.png"></a>
+                                 <a [href]="whatsappUrl + hostedURL + '/assets/images/features/mb2.jpg'" target="_blank"><img src="assets/images/features/Whapp.png"></a>
+                              </p>
+                           </div>
+                           <div class="item">
+                              <img class="img-responsive" src="assets/images/features/mb3.jpg" alt="...">
+                              <p class="socioicons">
+                                 <a [href]="facebookUrl + hostedURL + '/assets/images/features/mb3.jpg'" target="_blank"><img src="assets/images/features/Fb.png"></a>
+                                 <a [href]="whatsappUrl + hostedURL + '/assets/images/features/mb3.jpg'" target="_blank"><img src="assets/images/features/Whapp.png"></a>
+                              </p>
+                           </div>
+                           <div class="item">
+                              <img class="img-responsive" src="assets/images/features/mb4.jpg" alt="...">
+                              <p class="socioicons">
+                                 <a [href]="facebookUrl + hostedURL + '/assets/images/features/mb4.jpg'" target="_blank"><img src="assets/images/features/Fb.png"></a>
+                                 <a [href]="whatsappUrl + hostedURL + '/assets/images/features/mb4.jpg'" target="_blank"><img src="assets/images/features/Whapp.png"></a>
+                              </p>
+                           </div>
+                           <div class="item">
+                              <img class="img-responsive" src="assets/images/features/mb5.jpg" alt="...">
+                              <p class="socioicons">
+                                 <a [href]="facebookUrl + hostedURL + '/assets/images/features/mb5.jpg'" target="_blank"><img src="assets/images/features/Fb.png"></a>
+                                 <a [href]="whatsappUrl + hostedURL + '/assets/images/features/mb5.jpg'" target="_blank"><img src="assets/images/features/Whapp.png"></a>
+                              </p>
+                           </div>
+                           <div class="item">
+                              <img class="img-responsive" src="assets/images/features/mb6.jpg" alt="...">
+                              <p class="socioicons">
+                                 <a [href]="facebookUrl + hostedURL + '/assets/images/features/mb6.jpg'" target="_blank"><img src="assets/images/features/Fb.png"></a>
+                                 <a [href]="whatsappUrl + hostedURL + '/assets/images/features/mb6.jpg'" target="_blank"><img src="assets/images/features/Whapp.png"></a>
+                              </p>
+                           </div>
+                           <div class="item">
+                              <img class="img-responsive" src="assets/images/features/mb7.jpg" alt="...">
+                              <p class="socioicons">
+                                 <a [href]="facebookUrl + hostedURL + '/assets/images/features/mb7.jpg'" target="_blank"><img src="assets/images/features/Fb.png"></a>
+                                 <a [href]="whatsappUrl + hostedURL + '/assets/images/features/mb7.jpg'" target="_blank"><img src="assets/images/features/Whapp.png"></a>
+                              </p>
+                           </div>
+                           <div class="item">
+                              <img class="img-responsive" src="assets/images/features/mb8.jpg" alt="...">
+                              <p class="socioicons">
+                                 <a [href]="facebookUrl + hostedURL + '/assets/images/features/mb8.jpg'" target="_blank"><img src="assets/images/features/Fb.png"></a>
+                                 <a [href]="whatsappUrl + hostedURL + '/assets/images/features/mb8.jpg'" target="_blank"><img src="assets/images/features/Whapp.png"></a>
+                              </p>
+                           </div> -->
+                        </div>
+                     
+                         <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
+                         <span class="glyphicon glyphicon-chevron-left"></span>
+                         </a>
+                         <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
+                         <span class="glyphicon glyphicon-chevron-right"></span>
+                         </a>
+                      </div>
+                   </div>
+                   <div class="modal-footer">
+                     <ol class="carousel-indicators">
+                        <li data-target="#lightbox" data-slide-to="0" ><img class="img-responsive" src="assets/images/features/mb1.jpg" alt="..."></li>
+                        <li data-target="#lightbox" data-slide-to="1">   <img class="img-responsive" src="assets/images/features/mb2.jpg" alt="..."></li>
+                        <li data-target="#lightbox" data-slide-to="5">   <img class="img-responsive" src="assets/images/features/mb6.jpg" alt="..."></li>
+                        <li data-target="#lightbox" data-slide-to="3">   <img class="img-responsive" src="assets/images/features/mb4.jpg" alt="..."></li>
+                        <li data-target="#lightbox" data-slide-to="4">   <img class="img-responsive" src="assets/images/features/mb5.jpg" alt="..."></li>
+                        <li data-target="#lightbox" data-slide-to="2">   <img class="img-responsive" src="assets/images/features/mb3.jpg" alt="..."></li>
+                        <li data-target="#lightbox" data-slide-to="6">   <img class="img-responsive" src="assets/images/features/mb7.jpg" alt="..."></li>
+                        <li data-target="#lightbox" data-slide-to="7">   <img class="img-responsive" src="assets/images/features/mb8.jpg" alt="..."></li>
+                     </ol>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <section id="test">
+       <div class="container">
+          <h2>TEST YOUR <span>BPH SEVERITY</span></h2>
+          <h2>It's <span>QUICK </span> and <span> EASY</span></h2>
+          <figure  class="bphbanner">
+             <img src="assets/images/BPH-Banner.png">
+             <button routerLink="/test-your-bph" class="testnow">TAKE A TEST NOW</button>
+          </figure>
+       </div>
+    </section>
+    <!-- <section id="spec">
+       <div class="container">
+          <h2>FIND <span>BPH SPECIALIST</span></h2>
+          <div class="inputWithIcon">
+             <input name="speccode" type="text" id="speccode" placeholder="Enter name or pincode or area" #bphspecialist class="ui-autocomplete-input" style="padding-bottom: 0;margin-bottom: 0;" autocomplete="off">
+             <a class="searchicon"><i class="fa fa-search fa-lg fa-fw" aria-hidden="true"></i></a>
+             <ul style="background: white;list-style: none;padding-left: 0;">
+               <li style="border: 1px solid;cursor: pointer;" *ngFor="let bphspecialist of bphSpecialistList" [routerLink]="'/bphfinder/'+ bphspecialist.Name">{{bphspecialist.Name}}</li>
+             </ul>
+          </div>
+       </div>
+    </section> -->
+    <section id="faq">
+       <div class="container">
+          <h2>FAQs</h2>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+             <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                   <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      What is a prostate? 
+                      </a>
+                   </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                   <div class="panel-body">
+                      <p>
+                         The prostate is a walnut-shaped gland that is part of the male reproductive system. The main
+                         function of the prostate is to make a fluid that goes into semen.
+                      </p>
+                   </div>
+                </div>
+             </div>
+             <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                   <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      What is benign prostatic hyperplasia or BPH?
+                      </a>
+                   </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                   <div class="panel-body">
+                      <p>
+                         Benign prostatic hyperplasia - also called BPH - is a condition in men in which the prostate
+                         gland is enlarged and not cancerous. Benign prostatic hyperplasia is also called benign
+                         prostatic hypertrophy or benign prostatic obstruction.</p>
+                         <p>
+                         The prostate goes through two main growth periods as a man ages. The first occurs early in
+                         puberty, when the prostate doubles in size. The second phase of growth begins around age 25
+                         and continues during most of a man's life. Benign prostatic hyperplasia often occurs with the
+                         second growth phase.
+                     </p>
+                     <p>
+                         As the prostate enlarges, the gland presses against and pinches the urethra. The bladder wall becomes thicker. Eventually, the bladder may weaken and lose the ability to empty completely, leaving some urine in the bladder.
+                      </p>
+                   </div>
+                </div>
+             </div>
+             <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                   <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      What causes benign prostatic hyperplasia?
+                      </a>
+                   </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                   <div class="panel-body">
+                      <p>
+                         Men with the following factors are more likely to develop benign prostatic hyperplasia
+                      </p>
+                      <ul>
+                         <li>Age 40 years and older
+                         </li>
+                         <li>Family history of BPH
+                         </li>
+                         <li>Medical conditions such as obesity, heart and circulatory disease, and type 2 diabetes.</li>
+                         <li>Lack of physical exercise
+                         </li>
+                         <li>Erectile dysfunction</li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+             <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFour">
+                   <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Who is more likely to develop benign prostatic hyperplasia?
+                      </a>
+                   </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                   <div class="panel-body">
+                      <p>
+                         Men with the following factors are more likely to develop benign prostatic hyperplasia
+                         - Age 40 years and older
+                         - Family history of BPH
+                         - Medical conditions such as obesity, heart and circulatory disease, and type 2 diabetes.
+                         - Lack of physical exercise
+                         - Erectile dysfunction
+                      </p>
+                   </div>
+                </div>
+             </div>
+             <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFive">
+                   <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                      What are the symptoms of benign prostatic Hyperplasia?
+                      </a>
+                   </h4>
+                </div>
+                <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                   <div class="panel-body">
+                      <p>Urinary frequency: urination eight or more times a day</p>
+                      <p>Urinary urgency: the inability to delay urination</p>
+                      <p>Trouble starting a urine stream</p>
+                      <p>Interrupted urine: a weak or an interrupted urine stream</p>
+                      <p>Dribbling at the end of urination</p>
+                      <p>Nocturia: frequent urination during periods of sleep</p>
+                   </div>
+                </div>
+             </div>
+             <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingsix">
+                   <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                      What are the complications of benign prostatic hyperplasia?
+                      </a>
+                   </h4>
+                </div>
+                <div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                   <div class="panel-body">
+                      <p>The complications of benign prostatic hyperplasia may include</p>
+                      <ul>
+                         <li>Acute urinary retention</li>
+                         <li>Chronic, or long lasting urinary retention</li>
+                         <li>Blood in the urine</li>
+                         <li>Urinary tract infections(UTIs)</li>
+                         <li>Bladder damage</li>
+                         <li>Kidney damage</li>
+                         <li>Bladder stones</li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <section id="washroom">
+       <div class="container">
+          <h2>FIND <span>WASHROOMS</span></h2>
+          <p class="text-center">
+            <a routerLink="/washroomfinder">
+              <button  class="nearme">NEAR ME <i class="fa fa-map-marker"></i></button>
+            </a>
+          </p>
+       </div>
+    </section>
+  </main>
