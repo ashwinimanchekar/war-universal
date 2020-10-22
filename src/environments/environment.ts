@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseURL: 'https://war-api.herokuapp.com',
-  hostedURL: 'https://war-universal.herokuapp.com/',
+  baseURL: 'https://whatarelief.in/api',
+  hostedURL: 'https://whatarelief.in/',
   facebookShare: 'https://www.facebook.com/sharer/sharer.php?u=',
   whatsappShare: 'https://api.whatsapp.com/send?&text='
 };
