@@ -21,9 +21,6 @@ export class MasterService {
     imagename: 'mb6.jpg',
     title: 'understanding-bph'
   }, {
-    imagename: 'mb6.jpg',
-    title: 'understanding-bph'
-  }, {
     imagename: 'mb4.jpg',
     title: 'symptoms-of-bph'
   }, {

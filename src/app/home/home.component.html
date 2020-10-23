@@ -178,14 +178,9 @@
                    </div>
                    <div class="modal-footer">
                      <ol class="carousel-indicators">
-                        <li data-target="#lightbox" data-slide-to="0" ><img class="img-responsive" src="assets/images/features/mb1.jpg" alt="..."></li>
-                        <li data-target="#lightbox" data-slide-to="1">   <img class="img-responsive" src="assets/images/features/mb2.jpg" alt="..."></li>
-                        <li data-target="#lightbox" data-slide-to="5">   <img class="img-responsive" src="assets/images/features/mb6.jpg" alt="..."></li>
-                        <li data-target="#lightbox" data-slide-to="3">   <img class="img-responsive" src="assets/images/features/mb4.jpg" alt="..."></li>
-                        <li data-target="#lightbox" data-slide-to="4">   <img class="img-responsive" src="assets/images/features/mb5.jpg" alt="..."></li>
-                        <li data-target="#lightbox" data-slide-to="2">   <img class="img-responsive" src="assets/images/features/mb3.jpg" alt="..."></li>
-                        <li data-target="#lightbox" data-slide-to="6">   <img class="img-responsive" src="assets/images/features/mb7.jpg" alt="..."></li>
-                        <li data-target="#lightbox" data-slide-to="7">   <img class="img-responsive" src="assets/images/features/mb8.jpg" alt="..."></li>
+                        <ng-container  *ngFor="let images of imageTitle; let i = index;">
+                           <li data-target="#lightbox"  [attr.data-slide-to]="i" ><img class="img-responsive" [src]="'assets/images/features/' + images.imagename" alt="..."></li>
+                        </ng-container>
                      </ol>
                    </div>
                 </div>
