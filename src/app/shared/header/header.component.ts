@@ -34,6 +34,23 @@ export class HeaderComponent implements AfterViewInit {
     }
   }
 
+  testNavigate(): any {
+    // href="#testyourbph"
+    // const body = $('html, body');
+    // body.stop().animate({scrollTop: 0 }, 500, 'swing');
+    console.log(this.router.url);
+    if (this.router.url === '/test-your-bph') {
+      this.router.navigateByUrl('/#testyourbph');
+      const element = document.getElementById('testyourbph');
+      element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+    } else {
+      this.router.navigateByUrl('/#testyourbph');
+      const element = document.getElementById('testyourbph');
+      element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+      window.scrollTo(window.scrollX, document.getElementById('testyourbph').offsetTop - 100);
+    }
+  }
+
   get isAddBph(): boolean { return this.router.url.indexOf('addbph') > -1; }
 
 }

@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         const target = e.target.hash;
         const $target = $(target);
         $('html, body').stop().animate({
-          scrollTop: $target.offset().top - 70
+          scrollTop: $target.offset().top - 100
         }, 700, 'swing', () => {
             window.location.hash = target;
         });
