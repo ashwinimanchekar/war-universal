@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChemistlocatorComponent } from './chemistlocator/chemistlocator.component';
 import { ImagecomponentComponent } from './imagecomponent/imagecomponent.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxUiLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

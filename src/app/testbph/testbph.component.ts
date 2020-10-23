@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 declare const $: any;
 import { ElementRef , ViewChild} from '@angular/core';
 import { MasterService } from '../../shared/master.service';
-// import { saveAs } from 'file-saver';
-
+import { saveAs } from 'file-saver';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 @Component({
   selector: 'app-testbph',
   templateUrl: './testbph.component.html',
@@ -23,7 +23,8 @@ export class TestbphComponent implements OnInit {
   submitAttempt: boolean;
   totalScore: number;
   qualityOfLiftIndex: string;
-  constructor(private fb: FormBuilder, private masterService: MasterService) {
+  constructor(private fb: FormBuilder, private masterService: MasterService,
+              @Inject(PLATFORM_ID) private platformId: any) {
     this.form = fb.group({
       sensation: ['', Validators.required],
       urinate_again: ['', Validators.required],
@@ -117,18 +118,26 @@ export class TestbphComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const el = document.querySelector('.checkheader');
+      el.scrollIntoView({
+              behavior: 'auto',
+              block: 'center',
+              inline: 'center'
+      });
+    }
   }
 
   /**
    * This method download html as pdf
    */
   public downloadAsPDF(): any {
-    // this.masterService.getFile('download-report/' + this.submittedId).subscribe(
-    //   (response: any) => {
-    //     const blob = new Blob([response], { type: 'application/pdf' });
-    //     saveAs(blob, 'report.pdf');
-    //   },
-    //   (error => {}));
+    this.masterService.getFile('download-report/' + this.submittedId).subscribe(
+      (response: any) => {
+        const blob = new Blob([response], { type: 'application/pdf' });
+        saveAs(blob, 'report.pdf');
+      },
+      (error => {}));
   }
 
 }
